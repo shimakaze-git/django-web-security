@@ -1,0 +1,42 @@
+[
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "title": "PyConに行ってきた",
+      "text": "楽しかった"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "title": "Djangoチュートリアル",
+      "text": "投票アプリの構築までできた"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+      "text": "一番よかったセッションは？",
+      "post": 1
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+      "text": "懇親会はどうだった？",
+      "post": 1
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 3,
+    "fields": {
+      "text": "自分は難しくてできなかった",
+      "post": 2
+    }
+  }
+]
