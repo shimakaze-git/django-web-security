@@ -18,6 +18,8 @@ services:
       /bin/sh -c
       "dockerize -wait tcp://db:5432 &&
       pipenv install --system --dev &&
+      python3 manage.py migrate &&
+      python3 manage.py loaddata blog/fixtures/init.json &&
       python3 manage.py loaddata sushi/fixtures/init.json &&
       python3 manage.py runserver 0.0.0.0:8000"
     volumes:

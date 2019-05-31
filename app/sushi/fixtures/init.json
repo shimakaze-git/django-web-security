@@ -1,42 +1,84 @@
 [
   {
-    "model": "blog.post",
+    "model": "sushi.sushitopping",
     "pk": 1,
     "fields": {
-      "title": "PyConに行ってきた",
-      "text": "楽しかった"
+      "name": "タコ"
     }
   },
   {
-    "model": "blog.post",
+    "model": "sushi.sushitopping",
     "pk": 2,
     "fields": {
-      "title": "Djangoチュートリアル",
-      "text": "投票アプリの構築までできた"
+      "name": "サワラ"
     }
   },
   {
-    "model": "blog.comment",
-    "pk": 1,
-    "fields": {
-      "text": "一番よかったセッションは？",
-      "post": 1
-    }
-  },
-  {
-    "model": "blog.comment",
-    "pk": 2,
-    "fields": {
-      "text": "懇親会はどうだった？",
-      "post": 1
-    }
-  },
-  {
-    "model": "blog.comment",
+    "model": "sushi.sushitopping",
     "pk": 3,
     "fields": {
-      "text": "自分は難しくてできなかった",
-      "post": 2
+      "name": "シメサバ"
+    }
+  },
+  {
+    "model": "sushi.sushitopping",
+    "pk": 4,
+    "fields": {
+      "name": "マグロ"
+    }
+  },
+
+  {
+    "model": "sushi.menu",
+    "pk": 1,
+    "fields": {
+      "name": "ネギトロ",
+      "price": 180,
+      "sushi_toppings": [4]
+    }
+  },
+  {
+    "model": "sushi.menu",
+    "pk": 2,
+    "fields": {
+      "name": "トロ",
+      "price": 500,
+      "sushi_toppings": [4]
+    }
+  },
+  {
+    "model": "sushi.menu",
+    "pk": 3,
+    "fields": {
+      "name": "タコ",
+      "price": 200,
+      "sushi_toppings": [1]
+    }
+  },
+  {
+    "model": "sushi.menu",
+    "pk": 4,
+    "fields": {
+      "name": "シメサバ",
+      "price": 180,
+      "sushi_toppings": [3]
+    }
+  },
+
+  {
+    "model": "sushi.sale",
+    "pk": 1,
+    "fields": {
+      "sales_date": "2019-05-13 13:44:54",
+      "menu": 1
+    }
+  },
+  {
+    "model": "sushi.sale",
+    "pk": 2,
+    "fields": {
+      "sales_date": "2019-01-16 17:41:28",
+      "menu": 4
     }
   }
 ]
