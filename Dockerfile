@@ -1,15 +1,15 @@
-FROM python:3.7
+FROM python:3.9
 
-ENV PYTHONUNBUFFERED 1
-ENV DOCKERIZE_VERSION v0.6.1
-RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
-    tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
-    rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+ENV PYTHONPATH /usr/src/app
 
-WORKDIR /code/
-COPY Pipfile* ./
-RUN pip install --upgrade pip && \
-    pip install pipenv && \
-    pipenv install --system --dev
+WORKDIR /usr/src/app
 
-ADD . /code
+RUN apt-get update -y
+RUN apt-get install libpq-dev -y
+
+COPY . /usr/src/app
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt --no-cache-dir
+
+EXPOSE 8000
