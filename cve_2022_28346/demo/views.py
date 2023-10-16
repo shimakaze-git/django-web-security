@@ -1,5 +1,3 @@
-# import datetime
-
 from django.db.models import Count, QuerySet
 from django.http import HttpResponse, HttpRequest
 
@@ -16,10 +14,10 @@ def loadexampledata(_: HttpRequest):
 
 
 def users(request: HttpRequest):
-    field: str = request.GET.get('field', 'name')
+    field: str = request.GET.get('field', "demo.name")
     user_amount: QuerySet[User] = User.objects.annotate(**{field: Count("name")})
 
     html: str = ""
     for u in user_amount:
-        html += "<h3>Amoount of users: {0}</h3>".format(u)
+        html += f"<h3>Amoount of users: {u}</h3>"
     return HttpResponse(html)
