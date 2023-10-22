@@ -25,3 +25,9 @@ services:
       - db
     command: |
       bash -c "sleep 2 && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+
+  juice-shop:
+    image: bkimminich/juice-shop
+    restart: always
+    ports:
+      - 3000:3000
