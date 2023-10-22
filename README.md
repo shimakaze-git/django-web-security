@@ -1,4 +1,4 @@
-# django-rdb-study
+# python-web-security
 
 ```
 # cve 2022 28346
