@@ -1,5 +1,12 @@
 # python-web-security
 
+```bash
+$ chmod +x db/init-db.sh
+
+$ docker-compose build
+$ docker-compose up -d
+```
+
 ```
 # cve 2022 28346
 http://localhost:8000
